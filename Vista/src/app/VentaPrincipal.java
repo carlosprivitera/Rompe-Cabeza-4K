@@ -9,7 +9,7 @@ import recursos.Imagenes01;
 
 /**
  *
- * @author carlo
+ * @author Carlos
  */
 public class VentaPrincipal extends javax.swing.JFrame {
 
