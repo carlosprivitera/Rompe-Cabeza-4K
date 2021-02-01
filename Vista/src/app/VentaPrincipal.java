@@ -13,7 +13,7 @@ import recursos.Imagenes01;
  */
 public class VentaPrincipal extends javax.swing.JFrame {
 
-    private ImageIcon Img = new ImageIcon(getClass().getResource("/icoForm64.png"));
+    private ImageIcon Img = new ImageIcon(getClass().getResource("icoForm64.png"));
     private Image Imag01 = Img.getImage();
     Imagenes01 i = null;
     /** Creates new form VentaPrincipal */
