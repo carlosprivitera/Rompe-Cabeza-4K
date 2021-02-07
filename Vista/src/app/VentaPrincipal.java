@@ -45,6 +45,8 @@ public class VentaPrincipal extends javax.swing.JFrame {
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Rompe cabeza");
@@ -61,6 +63,11 @@ public class VentaPrincipal extends javax.swing.JFrame {
         });
 
         jLabel2.setText("jLabel2");
+        jLabel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel2MouseMoved(evt);
+            }
+        });
         jLabel2.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 aaa(evt);
@@ -116,6 +123,12 @@ public class VentaPrincipal extends javax.swing.JFrame {
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton2);
 
+        jLabel5.setText("Lugar n");
+        jToolBar1.add(jLabel5);
+
+        jLabel6.setText("x:y");
+        jToolBar1.add(jLabel6);
+
         getContentPane().add(jToolBar1, java.awt.BorderLayout.PAGE_START);
 
         getAccessibleContext().setAccessibleDescription("Solitario infinito");
@@ -140,6 +153,14 @@ public class VentaPrincipal extends javax.swing.JFrame {
         //i.escalar(jScrollPane1.getWidth() - (jScrollPane1.getVerticalScrollBar().getWidth()*2));
         i.escalar(jScrollPane1.getWidth(), jScrollPane1.getHeight());
     }//GEN-LAST:event_jScrollPane1ComponentResized
+    private int x = 0, y = 0, lugar = 0; 
+    private void jLabel2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseMoved
+        // TODO add your handling code here:
+        x=evt.getX(); y=evt.getY();
+        this.jLabel6.setText(x + ":" + y);
+        lugar = Integer.valueOf(("Lugar" + "5"));
+        this.jLabel5.setText("" + lugar);
+    }//GEN-LAST:event_jLabel2MouseMoved
 
     /**
      * @param args the command line arguments
@@ -220,6 +241,8 @@ public class VentaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;
